@@ -1,0 +1,102 @@
+[
+  {
+    "id": 1,
+    "username": "eat-music-4",
+    "superuser": false
+  },
+  {
+    "id": 2,
+    "username": "leopard-7",
+    "superuser": false
+  },
+  {
+    "id": 3,
+    "username": "espresso-talk-5",
+    "superuser": false
+  },
+  {
+    "id": 4,
+    "username": "tiger-owl-1",
+    "superuser": false
+  },
+  {
+    "id": 5,
+    "username": "organic-eat-6",
+    "superuser": false
+  },
+  {
+    "id": 6,
+    "username": "espresso-1",
+    "superuser": false
+  },
+  {
+    "id": 7,
+    "username": "soup-music-5",
+    "superuser": false
+  },
+  {
+    "id": 8,
+    "username": "leopard-talk-4",
+    "superuser": false
+  },
+  {
+    "id": 9,
+    "username": "organic-7",
+    "superuser": false
+  },
+  {
+    "id": 10,
+    "username": "happy-milk-5",
+    "superuser": false
+  },
+  {
+    "id": 11,
+    "username": "penguin-5",
+    "superuser": false
+  },
+  {
+    "id": 12,
+    "username": "organic-tiger-4",
+    "superuser": false
+  },
+  {
+    "id": 13,
+    "username": "drink-fork-9",
+    "superuser": false
+  },
+  {
+    "id": 14,
+    "username": "mocha-moo-9",
+    "superuser": false
+  },
+  {
+    "id": 15,
+    "username": "lion-latte-7",
+    "superuser": false
+  },
+  {
+    "id": 16,
+    "username": "organic-1",
+    "superuser": false
+  },
+  {
+    "id": 17,
+    "username": "fish-tiger-3",
+    "superuser": false
+  },
+  {
+    "id": 18,
+    "username": "spoon-chat-2",
+    "superuser": false
+  },
+  {
+    "id": 19,
+    "username": "season-moo-7",
+    "superuser": false
+  },
+  {
+    "id": 20,
+    "username": "top-dream-1",
+    "superuser": false
+  }
+]
