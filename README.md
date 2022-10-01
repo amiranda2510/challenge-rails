@@ -1,7 +1,7 @@
 # README
 
 # Tasks
-- Implement an endpoint to create profiles
+- Implement a form (and the endpoint that receives the form) to create profiles
   - The migration to add the `profiles` table has already been created (`db/migrate/20220930174949_create_profiles.rb`), but it may need changes
   - Usernames may only contain alphanumeric characters and hyphens (-)
   - Usernames should be unique
