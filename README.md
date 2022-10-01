@@ -32,3 +32,4 @@
 ## Notes
 - Tests should be written for each feature
 - Ensure the code is reasonably secure
+- Note that the string/text columns in the database schema have a limit. How should the application behave if it receives parameters that exceed those limits?
