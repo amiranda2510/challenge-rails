@@ -1,0 +1,11 @@
+<div class='form-body'>
+  <%= form_for @profile, local: true do |form| %>
+    <div>
+      <%= form.label :username, class: 'form-text'%>
+      <%= form.text_field :username, class: 'form-field' %>
+      <div class='form-button'>
+        <%= form.submit class: "btn-form"%>
+      </div>
+    </div>
+  <% end %>
+</div>
