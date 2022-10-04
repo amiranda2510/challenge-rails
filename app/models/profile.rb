@@ -1,5 +1,6 @@
 class Profile < ApplicationRecord
 
+  has_many :repositories, dependent: :destroy
   #VALIDATIONS
   validates :username,  
             presence: true,
