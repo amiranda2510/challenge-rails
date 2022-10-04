@@ -16,4 +16,22 @@ class ReportsController < ApplicationController
       format.json { render json: @profile_list.as_json }
     end
   end
+
+  def external
+    @data = client_data
+    @profile_list = @data.map do |profile|
+      { username: profile["username"], repositories: profile["repositories"].map { |repo| { id: repo["id"], name: repo["name"], tags: repo["tags"], profile_id: repo["profile_id"]} } }
+    end
+
+    respond_to do |format|
+      format.html
+      format.json { render json: @profile_list.as_json }
+    end
+  end
+
+  private
+
+    def client_data
+      @client_data ||= ReportService.new.client_data
+    end
 end

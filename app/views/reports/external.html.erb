@@ -1,0 +1,19 @@
+<div>
+  <h1>Profiles</h1>
+  <% @data.each do |profile| %>
+    <h2><%= profile["username"] %></h2>
+    <h3>Repositories</h3>
+      <% if profile["repositories"].any? %>
+        <ul>
+          <% profile["repositories"].each do |repository| %>
+            <li>id: <%= repository["id"] %></li>
+            <li>name: <%= repository["name"] %></li>
+            <li>tags: <%= repository["tags"] %></li>
+            <li>profile id: <%= repository["profile_id"] %></li>
+          <% end %>
+        </ul>
+      <% else %>
+        <div>This user has 0 repositories</div>
+      <% end %>
+  <% end %>
+</div>
