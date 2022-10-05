@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.0].define(version: 2022_09_30_175002) do
+ActiveRecord::Schema[7.0].define(version: 2022_10_04_025217) do
   create_table "profiles", force: :cascade do |t|
     t.string "username", limit: 255, null: false
     t.boolean "superuser", default: false, null: false
@@ -21,8 +21,10 @@ ActiveRecord::Schema[7.0].define(version: 2022_09_30_175002) do
   create_table "repositories", force: :cascade do |t|
     t.string "name", limit: 255, null: false
     t.text "tags", limit: 1024, null: false
+    t.integer "profile_id", null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.index ["profile_id"], name: "index_repositories_on_profile_id"
   end
 
   create_table "view_counts", force: :cascade do |t|
@@ -30,6 +32,8 @@ ActiveRecord::Schema[7.0].define(version: 2022_09_30_175002) do
     t.integer "views", default: 0, null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.index ["views"], name: "index_view_counts_on_views", unique: true
   end
 
+  add_foreign_key "repositories", "profiles"
 end
