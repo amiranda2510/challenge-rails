@@ -1,4 +1,5 @@
 require 'rails_helper'
+require 'external/client'
 
 RSpec.describe ReportsController, type: :controller do
   before(:each) do
@@ -38,6 +39,27 @@ RSpec.describe ReportsController, type: :controller do
 
       expect(response.body).to include('mockito repo')
       expect(response.body).to_not include('lala')
+    end
+  end
+
+  describe 'GET #external' do
+
+    it 'renders index' do    
+      client = instance_double("::External::Client")
+      allow(client).to receive(:fetch_profiles).and_return{[{
+        "id": 1,
+        "username": "eat-music-4",
+        "superuser": false
+      },
+      {
+        "id": 2,
+        "username": "leopard-7",
+        "superuser": false
+      },]}
+
+      get :external, params: {}, :format => :json
+
+      expect(response.body).to include('eat-music-4')
     end
   end
 end

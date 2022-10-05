@@ -248,6 +248,7 @@ DEPENDENCIES
   rails (~> 7.0.4)
   rails-controller-testing
   readable-token
+  rspec-mocks
   rspec-rails
   selenium-webdriver
   sprockets-rails
